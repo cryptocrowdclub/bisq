@@ -30,7 +30,7 @@ public class CRowdCLassicTest extends AbstractAssetTest {
 
     @Test
     public void testValidAddresses() {
-        assertValidAddress("CfvddKQHdd975N5XQgmpVGTuK9mumvDBQo");
+        assertValidAddress("CLaUTqyiDcs1Hens3Qxpb7JSx6sKKTSjNn");
         assertValidAddress("CU7pAhQjw2mjgQEAkxpsvAmeLU4Gs7ogQb");
     }
 

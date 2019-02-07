@@ -17,13 +17,41 @@
 
 package bisq.asset.coins;
 
+import bisq.asset.AddressValidationResult;
+import bisq.asset.Base58BitcoinAddressValidator;
 import bisq.asset.Coin;
-import bisq.asset.RegexAddressValidator;
+import bisq.asset.NetworkParametersAdapter;
 
-public class CRowdCLassic extends Coin {
+public class CrowdCLassic extends Coin {
 
-    public CRowdCLassic() {
-        super("CRowdCLassic", "CRCL", new RegexAddressValidator("^[C][a-zA-Z0-9]{33}$"));
+    public CrowdCLassic() {
+        super("CrowdCLassic", "CRCL", new Base58BitcoinAddressValidator(new CrowdCLassicParams()));
+    }
+
+
+    public static class CrowdCLassicAddressValidator extends Base58BitcoinAddressValidator {
+
+        public CrowdCLassicAddressValidator() {
+            super(new CrowdCLassicParams());
+        }
+
+        @Override
+        public AddressValidationResult validate(String address) {
+            if (!address.matches("^[C][a-km-zA-HJ-NP-Z1-9]{33}$"))
+                return AddressValidationResult.invalidStructure();
+
+            return super.validate(address);
+        }
+    }
+
+    
+    public static class CrowdCLassicParams extends NetworkParametersAdapter {
+
+        public CrowdCLassicParams() {
+            super();
+            addressHeader = 28;
+            p2shHeader = 88;
+            acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
+        }
     }
 }
-  
