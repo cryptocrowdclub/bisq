@@ -48,7 +48,6 @@ public class CrowdCLassic extends Coin {
     public static class CrowdCLassicParams extends NetworkParametersAdapter {
 
         public CrowdCLassicParams() {
-            super();
             addressHeader = 28;
             p2shHeader = 88;
             acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
