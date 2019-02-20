@@ -22,10 +22,10 @@ import bisq.asset.Base58BitcoinAddressValidator;
 import bisq.asset.Coin;
 import bisq.asset.NetworkParametersAdapter;
 
-public class CrowdCLassic extends Coin {
+public class CRowdCLassic extends Coin {
 
     public CrowdCLassic() {
-        super("CrowdCLassic", "CRCL", new Base58BitcoinAddressValidator(new CrowdCLassicParams()));
+        super("CRowdCLassic", "CRCL", new Base58BitcoinAddressValidator(new CrowdCLassicParams()));
     }
 
 
