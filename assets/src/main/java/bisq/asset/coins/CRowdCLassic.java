@@ -24,15 +24,15 @@ import bisq.asset.NetworkParametersAdapter;
 
 public class CRowdCLassic extends Coin {
 
-    public CrowdCLassic() {
-        super("CRowdCLassic", "CRCL", new Base58BitcoinAddressValidator(new CrowdCLassicParams()));
+    public CRowdCLassic() {
+        super("CRowdCLassic", "CRCL", new Base58BitcoinAddressValidator(new CRowdCLassicParams()));
     }
 
 
-    public static class CrowdCLassicAddressValidator extends Base58BitcoinAddressValidator {
+    public static class CRowdCLassicAddressValidator extends Base58BitcoinAddressValidator {
 
-        public CrowdCLassicAddressValidator() {
-            super(new CrowdCLassicParams());
+        public CRowdCLassicAddressValidator() {
+            super(new CRowdCLassicParams());
         }
 
         @Override
@@ -45,9 +45,9 @@ public class CRowdCLassic extends Coin {
     }
 
     
-    public static class CrowdCLassicParams extends NetworkParametersAdapter {
+    public static class CRowdCLassicParams extends NetworkParametersAdapter {
 
-        public CrowdCLassicParams() {
+        public CRowdCLassicParams() {
             addressHeader = 28;
             p2shHeader = 88;
             acceptableAddressCodes = new int[]{addressHeader, p2shHeader};
