@@ -15,7 +15,6 @@
  * along with Bisq. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 package bisq.asset.coins;
 
 import bisq.asset.AbstractAssetTest;

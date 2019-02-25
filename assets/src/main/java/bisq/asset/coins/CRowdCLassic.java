@@ -44,7 +44,6 @@ public class CRowdCLassic extends Coin {
         }
     }
 
-    
     public static class CRowdCLassicParams extends NetworkParametersAdapter {
 
         public CRowdCLassicParams() {
